@@ -576,7 +576,7 @@ class Controllercustomapi extends Controller
             return $this->error('Model, ürün başlığı ve seo başlık zorunlu alan');
         }
         $model              = $this->db->escape($data['model']);
-        $sku                = $this->db->escape($data['sku']) ?? null;
+        $sku                = $this->db->escape($data['sku'] ?? null);
         $quantity           = $data['quantity'] ?? null;
         $manufacturerId     = $data['manufacturer_id'] ?? null;
         $price              = $data['price'] ?? null;
@@ -651,7 +651,7 @@ class Controllercustomapi extends Controller
         $data = $this->request->post;
 
         $model              = $this->db->escape($data['model']);
-        $sku                = $this->db->escape($data['sku']) ?? null;
+        $sku                = $this->db->escape($data['sku'] ?? null);
         $quantity           = $data['quantity'] ?? null;
         $manufacturerId     = $data['manufacturer_id'] ?? null;
         $price              = $data['price'] ?? null;
